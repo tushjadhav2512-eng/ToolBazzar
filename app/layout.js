@@ -6,7 +6,7 @@ import CookieConsent from '@/components/cookie-consent'
 import { AdSenseScript } from '@/components/ad-slot'
 
 export const metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://toolbazaar.co.in'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://github.com/tushjadhav2512-eng/ToolBazzar'),
   title: {
     default: 'ToolBazaar — Free Online Tools: PDF, Image, Text & Calculator Tools',
     template: '%s | ToolBazaar'
@@ -33,7 +33,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href={`${process.env.NODE_ENV === 'production' ? '/ToolsBazzar-main' : ''}/favicon.svg`} type="image/svg+xml" />
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1207754989377229" crossOrigin="anonymous"></script>
         <meta name="google-adsense-account" content="ca-pub-1207754989377229" />
         <script dangerouslySetInnerHTML={{__html:'window.addEventListener("error",function(e){if(e.error instanceof DOMException&&e.error.name==="DataCloneError"&&e.message&&e.message.includes("PerformanceServerTiming")){e.stopImmediatePropagation();e.preventDefault()}},true);'}} />
